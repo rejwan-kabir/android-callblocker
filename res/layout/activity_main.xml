@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="5dp"
+    android:orientation="vertical"
+    android:weightSum="99" >
+
+    <LinearLayout
+        android:id="@+id/firstButtonBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="33" >
+
+        <Button
+            android:id="@+id/recentCalls"
+            style="@style/dashboard_button"
+            android:drawableTop="@drawable/home_button_recentcall"
+            android:onClick="recentCalls"
+            android:text="@string/button_recentcalls" />
+
+        <View
+            android:layout_width="2dp"
+            android:layout_height="fill_parent"
+            android:layout_marginBottom="5dp"
+            android:layout_marginTop="5dp"
+            android:background="#0099cc" />
+
+        <Button
+            android:id="@+id/viewAll"
+            style="@style/dashboard_button"
+            android:drawableTop="@drawable/home_button_viewall"
+            android:onClick="viewAll"
+            android:text="@string/button_viewall" />
+    </LinearLayout>
+
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="2dp"
+        android:background="#0099cc" />
+
+    <LinearLayout
+        android:id="@+id/secondButtonBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="33" >
+
+        <Button
+            android:id="@+id/addNew"
+            style="@style/dashboard_button"
+            android:drawableTop="@drawable/home_button_addnew"
+            android:onClick="addNew"
+            android:text="@string/button_addnew" />
+
+        <View
+            android:layout_width="2dp"
+            android:layout_height="fill_parent"
+            android:layout_marginBottom="5dp"
+            android:layout_marginTop="5dp"
+            android:background="#0099cc" />
+
+        <Button
+            android:id="@+id/unblock"
+            style="@style/dashboard_button"
+            android:drawableTop="@drawable/home_button_unblock"
+            android:onClick="unblock"
+            android:text="@string/button_unblock" />
+    </LinearLayout>
+
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="2dp"
+        android:background="#0099cc" />
+
+    <LinearLayout
+        android:id="@+id/thirdButtonBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="33" >
+
+        <Button
+            android:id="@+id/settings"
+            style="@style/dashboard_button"
+            android:drawableTop="@drawable/home_button_settings"
+            android:onClick="settings"
+            android:text="@string/action_settings" />
+
+        <View
+            android:layout_width="2dp"
+            android:layout_height="fill_parent"
+            android:layout_marginBottom="5dp"
+            android:layout_marginTop="5dp"
+            android:background="#0099cc" />
+
+        <Button
+            android:id="@+id/about"
+            style="@style/dashboard_button"
+            android:drawableTop="@drawable/home_button_about"
+            android:onClick="about"
+            android:text="@string/button_about" />
+    </LinearLayout>
+
+</LinearLayout>

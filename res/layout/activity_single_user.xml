@@ -1,0 +1,121 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context=".SingleUserActivity" >
+
+    <EditText
+        android:id="@+id/contact_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/user_view_vertical_margin"
+        android:layout_marginTop="@dimen/user_view_vertical_margin"
+        android:hint="@string/hint_contact_name"
+        android:maxLines="1"
+        android:singleLine="true" />
+
+    <LinearLayout
+        android:id="@+id/contactNumberHiddenLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/contact_name"
+        android:layout_marginBottom="@dimen/user_view_vertical_margin"
+        android:orientation="vertical" >
+
+        <EditText
+            android:id="@+id/contact_number"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/user_view_vertical_margin"
+            android:maxLines="1"
+            android:singleLine="true"
+            android:visibility="gone" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="@string/note_edit_number"
+            android:textColor="#29691D"
+            android:typeface="serif" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/addEditButtonPanel"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/contactNumberHiddenLayout"
+        android:minHeight="40dp"
+        android:orientation="horizontal" >
+
+        <Button
+            android:id="@+id/editContactNumber"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="2dp"
+            android:layout_marginRight="2dp"
+            android:layout_weight="1"
+            android:background="#D14836"
+            android:onClick="editContactNumber"
+            android:text="@string/button_edit_number"
+            android:textColor="#FFFFFF"
+            android:textSize="14sp"
+            android:visibility="invisible" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="2dp"
+            android:layout_marginRight="2dp"
+            android:layout_weight="1"
+            android:background="#29691D"
+            android:onClick="addNewNumber"
+            android:text="@string/button_add_number"
+            android:textColor="#FFFFFF"
+            android:textSize="14sp" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/lastCallTimeTextView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/addEditButtonPanel"
+        android:layout_marginTop="10dp"
+        android:gravity="center"
+        android:textColor="#D14836"
+        android:textSize="14sp"
+        android:textStyle="bold|italic"
+        android:visibility="gone" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="2dp"
+        android:minHeight="40dp"
+        android:orientation="horizontal" >
+
+        <Button
+            style="@style/user_button_panel"
+            android:background="#29691D"
+            android:onClick="save"
+            android:text="@string/button_save" />
+
+        <Button
+            style="@style/user_button_panel"
+            android:background="#3079ED"
+            android:onClick="cancel"
+            android:text="@string/button_cancel" />
+
+        <Button
+            style="@style/user_button_panel"
+            android:background="#D14836"
+            android:onClick="delete"
+            android:text="@string/button_unblock" />
+    </LinearLayout>
+
+</RelativeLayout>

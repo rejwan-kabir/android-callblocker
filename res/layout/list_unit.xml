@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <TextView
+        android:id="@+id/nameOfUnit"
+        style="@style/list_text_view"
+        android:textSize="@dimen/textsize_medium"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/numberOfUnit"
+        style="@style/list_text_view"
+        android:textSize="@dimen/textsize_small"
+        android:typeface="serif" />
+
+    <TextView
+        android:id="@+id/timeOfUnit"
+        style="@style/list_text_view"
+        android:textSize="@dimen/textsize_small"
+        android:textStyle="bold" />
+
+</LinearLayout>
